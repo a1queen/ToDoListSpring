@@ -19,6 +19,6 @@ public class Task {
     private String title;
     private  String description;
     private  int priority;
-    private  String date;
-
+    private String date;
+    private boolean active;
 }

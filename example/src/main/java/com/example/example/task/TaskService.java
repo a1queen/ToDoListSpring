@@ -34,4 +34,8 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
+    public ResponseEntity<Void> deleteTask(Long id) {
+taskRepository.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 
-
+@CrossOrigin(origins = "*")
 @RequestMapping("/task")
 public class TaskController {
 
@@ -33,4 +33,11 @@ public class TaskController {
     public Task getSingleTask(@PathVariable long id){
         return taskService.getSingleTask(id);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTask(@PathVariable Long id){
+        return taskService.deleteTask(id);
+    }
+
+
 }
